@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="GridExampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GridExampleApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="1st column 1st row"/>
+        <TextBlock Text="2nd column 1st row" Grid.Column="1"/>
+        <TextBlock Text="1st column 2nd row" Grid.Row="1"/>
+        <TextBlock Text="2nd column 2nd row" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Text="1st column 3rd row" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="2nd column 3rd row" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Page>
